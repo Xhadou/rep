@@ -1,0 +1,79 @@
+Abstract
+This report presents an overview of the eigenfaces method for face recognition, which uses dimensionality reduction and linear algebra concepts to recognize faces from images. The report explains the basic concepts of eigenvalues and eigenvectors, how they are used to construct eigenfaces from a set of training images, and how to perform face recognition using the coefficients of eigenfaces. The report also reviews some of the literature on image analysis, statistical and linear models, and computer vision that are relevant to the eigenfaces method. Finally, the report provides some examples of python code that implement the eigenfaces method using the OpenCV library.
+
+Introduction to Eigenvalues and Eigenvectors
+Eigenvalues and eigenvectors are fundamental concepts in linear algebra that describe the properties of linear transformations. A linear transformation is a function that maps vectors to vectors, such that the sum and scalar multiplication of vectors are preserved. For example, a matrix A can be seen as a linear transformation that maps a vector x to another vector Ax.
+An eigenvector of a linear transformation A is a nonzero vector v that does not change its direction when multiplied by A, but only its magnitude. In other words, Av is a scalar multiple of v, where the scalar is called the eigenvalue of A corresponding to v. Mathematically, this can be expressed as:
+Av=λv
+where λ is the eigenvalue and v is the eigenvector.
+Eigenvalues and eigenvectors can be used to analyze the properties of linear transformations, such as their rank, determinant, inverse, trace, etc. They can also be used to decompose a matrix into simpler components, such as diagonal or orthogonal matrices.
+
+Introduction to Eigenfaces Recognition - faces
+Eigenfaces recognition is a method for face recognition that uses eigenvalues and eigenvectors to reduce the dimensionality of face images and represent them in a lower-dimensional feature space. The idea behind this method is that face images can be seen as high-dimensional vectors that lie in a subspace of the image space, and that this subspace can be approximated by a linear combination of some basis vectors, called eigenfaces.
+The eigenfaces are computed from a set of training images by applying principal component analysis (PCA), which is a technique that finds the directions of maximum variance in the data and projects them onto a lower-dimensional space. The eigenfaces are then the eigenvectors of the covariance matrix of the training images, which capture the most significant variations among faces.
+To perform face recognition using eigenfaces, each face image is first normalized by subtracting the average face from it. Then, each face image is represented as a linear combination of the eigenfaces, using the coefficients as features. Finally, a similarity measure, such as Euclidean distance or cosine similarity, is used to compare the features of an unknown face image with those of the training images, and assign it to the closest match.
+
+Review Literature: Image Analysis
+Image analysis is a broad field that deals with processing, analyzing, and understanding images using various techniques from mathematics, computer science, engineering, and other disciplines. Image analysis can be applied to various domains, such as medical imaging, remote sensing, biometrics, security, etc.
+Some of the common tasks in image analysis are:
+•	Image enhancement: improving the quality or appearance of an image by modifying its contrast, brightness, sharpness, noise reduction, etc.
+•	Image segmentation: dividing an image into meaningful regions or objects based on some criteria, such as color, texture, shape, etc.
+•	Image feature extraction: extracting relevant information or characteristics from an image that can be used for further analysis or recognition
+•	Image classification: assigning an image to one or more categories based on its content or features
+•	Image recognition: identifying or verifying an object or a person in an image based on its features or models
+Some of the techniques used in image analysis are:
+•	Image transforms: applying mathematical operations to an image to change its representation or domain
+•	Image filtering: applying masks or kernels to an image to modify its pixels or regions based on some criteria
+•	Image compression: reducing the size or complexity of an image by removing redundant or irrelevant information
+•	Image restoration: recovering an image from degradation or distortion caused by noise, blurring, occlusion, etc.
+•	Image registration: aligning two or more images based on their common features or points
+•	Image fusion: combining two or more images into one image that contains more information or details
+
+
+Review Literature: Statistical and Linear Models
+Statistical and linear models are mathematical tools that can be used to describe the relationships between variables, test hypotheses, and make predictions or inferences based on data. Statistical and linear models can be applied to various problems in image analysis, such as image segmentation, classification, recognition, etc.
+Some of the common types of statistical and linear models are:
+•	Regression models: models that describe how a dependent variable (or response variable) depends on one or more independent variables (or explanatory variables). For example, simple linear regression is a model that assumes a linear relationship between a dependent variable y and an independent variable x, such that y = β0 + β1x + ε, where β0 and β1 are the coefficients of the model and ε is the error term. Regression models can be used to estimate the coefficients, test hypotheses about them, and predict the value of y for a given x.
+•	Analysis of variance (ANOVA) models: models that compare the means of two or more groups of observations based on some factors or treatments. For example, one-way ANOVA is a model that tests whether the mean of a dependent variable y differs among k groups defined by a single factor x. ANOVA models can be used to test hypotheses about the effects of factors or treatments on the response variable, and to estimate the magnitude of these effects.
+•	Generalized linear models (GLMs): models that extend the linear model to situations where the response variable does not have a normal distribution or where the relationship between the response and explanatory variables is not linear. For example, logistic regression is a GLM that models the probability of a binary outcome (such as success or failure) as a function of one or more explanatory variables, using a logistic function. GLMs can be used to model various types of response variables, such as counts, proportions, binary outcomes, etc., and to test hypotheses about the effects of explanatory variables on them.
+
+Review Literature: Computer Vision
+Computer vision is a field that deals with enabling machines to understand and interpret visual information from images or videos. Computer vision can be seen as a subfield of artificial intelligence that combines techniques from image analysis, machine learning, pattern recognition, computer graphics, etc.
+Some of the common tasks in computer vision are:
+•	Face detection and recognition: locating and identifying human faces in images or videos
+•	Object detection and recognition: locating and identifying objects of interest in images or videos
+•	Scene understanding: analyzing and describing the content and context of images or videos
+•	Image synthesis: generating realistic or stylized images from descriptions or examples
+•	Image restoration: recovering images from degradation or distortion caused by noise, blurring, occlusion, etc.
+Some of the techniques used in computer vision are:
+•	Feature extraction: extracting relevant information or characteristics from images or videos that can be used for further analysis or recognition
+•	Machine learning: applying algorithms that learn from data and make predictions or decisions based on them
+•	Deep learning: using artificial neural networks that consist of multiple layers of processing units that can learn complex patterns or features from data
+•	Convolutional neural networks (CNNs): a type of deep learning model that uses convolutional layers to extract features from images or videos
+•	Principal component analysis (PCA): a technique that reduces the dimensionality of data by finding the directions of maximum variance and projecting them onto a lower-dimensional space
+
+Facial Recognition using Eigenvalues
+Facial recognition using eigenvalues is a technique that uses the eigenfaces method to recognize or verify a person’s identity from a face image. The technique involves the following steps:
+•	Preprocessing: The face image is converted to grayscale, resized, and normalized by subtracting the average face vector from it.
+•	Projection: The face image is projected onto the eigenface space by taking the dot product between the face vector and each of the eigenfaces. This results in a vector of coefficients that represent the face image as a linear combination of eigenfaces.
+•	Classification: The face image is compared with the training images by measuring the distance or similarity between their coefficient vectors. The face image is assigned to the class or person that has the smallest distance or highest similarity.
+The distance or similarity measure can be chosen based on different criteria, such as Euclidean distance, cosine similarity, Mahalanobis distance, etc. The choice of the measure can affect the performance and accuracy of the facial recognition system.
+The facial recognition using eigenvalues technique has some advantages and disadvantages:
+•	Advantages: It is simple and easy to implement. It reduces the dimensionality of face images and makes them more compact and efficient to store and process. It captures the most significant variations among faces and discards the irrelevant details.
+•	Disadvantages: It assumes that faces are linearly separable in the eigenface space, which may not be true for complex or diverse faces. It is sensitive to changes in illumination, pose, expression, occlusion, etc. It may not be robust to noise or outliers in the data.
+
+Results and Limitations
+The eigenfaces method for facial recognition has been tested and evaluated on various datasets and applications, such as the AT&T Laboratories Cambridge face database, the Yale face database, the FERET database, and the Labeled Faces in the Wild (LFW) database. The results show that the eigenfaces method can achieve high accuracy and efficiency in recognizing faces under controlled conditions, such as frontal pose, uniform illumination, and neutral expression. However, the results also show that the eigenfaces method has some limitations and challenges in dealing with real-world scenarios, such as varying pose, illumination, expression, occlusion, aging, etc.
+Some of the limitations and challenges of the eigenfaces method are:
+•	The eigenfaces method assumes that faces are linearly separable in the eigenface space, which may not be true for complex or diverse faces. The linear approximation may not capture the nonlinear variations and interactions among facial features.
+•	The eigenfaces method is sensitive to changes in illumination, pose, expression, occlusion, aging, etc. These factors can cause significant changes in the appearance of faces and affect their representation in the eigenface space. The eigenfaces method may not be able to handle these variations and generalize well to unseen faces.
+•	The eigenfaces method requires a large and representative training set of face images to compute the eigenfaces and capture the most significant variations among faces. However, collecting and labeling such a large and diverse dataset may be difficult and costly. Moreover, the training set may not cover all possible variations and scenarios that may occur in real-world applications.
+•	The eigenfaces method relies on a fixed number of eigenfaces to represent face images. However, choosing the optimal number of eigenfaces is not trivial and may depend on various factors, such as the size and quality of the training set, the complexity and diversity of the faces, the similarity measure used for classification, etc. Choosing too few eigenfaces may result in loss of information and poor recognition performance. Choosing too many eigenfaces may result in noise and redundancy and increase computational complexity.
+
+Alternative Options for Face Recognition
+The eigenfaces method is not the only option for face recognition. There are other methods that use different techniques and approaches to recognize faces from images or videos. Some of the alternative options for face recognition are:
+•	Fisherfaces: This method extends the eigenfaces method by using linear discriminant analysis (LDA) instead of PCA to find the optimal projection of face images that maximizes the between-class scatter and minimizes the within-class scatter. This method can handle variations in illumination and expression better than the eigenfaces method
+•	Local Binary Patterns (LBP): This method uses a simple and efficient texture operator that extracts local features from face images by comparing each pixel with its neighbors and encoding the result as a binary number. The LBP features are then used to construct histograms that represent the face images. The histograms can be compared using a similarity measure, such as chi-square distance, to perform face recognition.
+•	Deep Learning: This method uses artificial neural networks that consist of multiple layers of processing units that can learn complex patterns or features from data. One of the most popular types of deep learning models for face recognition is convolutional neural networks (CNNs), which use convolutional layers to extract features from images or videos. The CNNs can be trained on large and diverse datasets of face images, such as VGGFace2 or MS-Celeb-1M, to learn robust and discriminative features that can handle variations in pose, illumination, expression, occlusion, aging, etc.
+
+
