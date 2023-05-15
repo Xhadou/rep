@@ -1,0 +1,89 @@
+The following contains my files related to the project facial recognition using eigenfaces-
+https://github.com/Xhadou/mat161/blob/training_data/data_utils.py
+ And the following is the study on which my report is based on –
+https://sites.cs.ucsb.edu/~mturk/Papers/jcn.pdf
+The following are some references to how people make reports on the same project-
+https://github.com/navydhara79/Face-Recognition-using-eigen-faces
+https://github.com/informramiz/opencv-face-recognition-python/blob/master/README.md
+The following is the directory structure of our project-
+•	eigenfaces: The root directory of the project
+o	test data: The subdirectory that contains the test images for facial recognition
+	s1: The subdirectory that contains the images of subject 1
+	1.pgm: The image file of subject 1
+	s2: The subdirectory that contains the images of subject 2
+	2.pgm: The image file of subject 2
+	…
+	s40: The subdirectory that contains the images of subject 40
+	40.pgm: The image file of subject 40
+o	training data: The subdirectory that contains the training images for facial recognition
+	s1: The subdirectory that contains the images of subject 1
+	1.pgm: The image file of subject 1
+	2.pgm: The image file of subject 1
+	…
+	9.pgm: The image file of subject 1
+	s2: The subdirectory that contains the images of subject 2
+	…
+	…
+	s40: The subdirectory that contains the images of subject 40
+	…
+o	data_utils.py: The Python script that contains the functions and classes for data preprocessing and loading
+o	eigenfaces.py: The Python script that contains the functions and classes for facial recognition using eigenfaces
+o	main.py: The Python script that runs the main program and calls the other scripts
+o	parameters.json: The JSON file that stores the parameters and settings for the project, such as image size, number of eigenfaces, etc.
+o	requirements.txt: The text file that lists the dependencies and libraries required for the project, such as numpy, opencv, scikit-learn, etc.
+o	readme.md: The markdown file that provides the documentation and instructions for the project, such as the description, installation, usage, results, etc.
+Using the information I provided you, make a report using the following report structure-
+1)	Abstract: A brief summary of your project, including the motivation, the main objectives, the methods used, the results obtained, and the conclusions drawn.
+
+2)	Introduction: A more detailed introduction to your project, including the background information on facial recognition and eigenfaces, the problem statement, the scope and limitations of your project, and the outline of your report.
+Subtopics for introduction-
+Motivation: Why is facial recognition using eigenfaces important and interesting?
+Problem Statement: What is the main problem or challenge you are trying to solve or address in your project?
+Scope and Limitations: What are the boundaries and constraints of your project, such as the data size, the algorithm complexity, the hardware requirements, etc.?
+Outline: What are the main sections and subtopics of your report and how are they organized?
+3)	Theory: A comprehensive explanation of the theoretical concepts and mathematical principles behind facial recognition using eigenfaces, such as principal component analysis (PCA), eigenvalues and eigenvectors, covariance matrix, linear algebra, etc. You should also include relevant diagrams, equations, and examples to illustrate your points.
+Subtopics-
+Principal Component Analysis (PCA): What is PCA and how does it work? What are the benefits and drawbacks of using PCA for dimensionality reduction and feature extraction?
+Eigenvalues and Eigenvectors: What are eigenvalues and eigenvectors and how are they related to PCA? How do you compute them and what do they represent?
+Covariance Matrix: What is a covariance matrix and how does it measure the variance and correlation of data? How do you construct and use a covariance matrix for PCA?
+Linear Algebra: What are some linear algebra concepts and operations that are relevant to facial recognition using eigenfaces, such as matrix multiplication, inverse, transpose, dot product, etc.?
+4)	Algorithm Implementation: A description of how you implemented the facial recognition algorithm using eigenfaces, including the pseudocode, the flowchart, and the explanation of each step. You should also mention the assumptions and parameters you used in your algorithm.
+Subtopics-
+Pseudocode: What is the pseudocode of your facial recognition algorithm using eigenfaces? What are the main steps and logic of your algorithm?
+Flowchart: What is the flowchart of your facial recognition algorithm using eigenfaces? How does it illustrate the flow of data and control in your algorithm?
+Explanation: What is the explanation of each step in your facial recognition algorithm using eigenfaces? How do you justify and rationalize your algorithm design and choices?
+5)	Data Preprocessing: A description of how you prepared your data for facial recognition using eigenfaces, including the data collection, cleaning, normalization, resizing, cropping, etc. You should also explain why these steps are necessary and how they affect your results.
+Subtopics-
+Data Collection: How did you collect your data for facial recognition using eigenfaces? What are the sources and formats of your data? How many images and subjects did you use in your data?
+Data Cleaning: How did you clean your data for facial recognition using eigenfaces? What are the issues and errors in your data that you need to fix or remove, such as noise, outliers, missing values, etc.?
+Data Normalization: How did you normalize your data for facial recognition using eigenfaces? What are the methods and techniques you used to scale and standardize your data, such as min-max scaling, z-score normalization, etc.?
+Data Resizing: How did you resize your data for facial recognition using eigenfaces? What are the dimensions and resolutions of your images before and after resizing? How did you preserve the aspect ratio and quality of your images?
+Data Cropping: How did you crop your data for facial recognition using eigenfaces? What are the regions and features of interest in your images that you need to extract or highlight? How did you align and center your images?
+6)	Code Implementation: A description of how you implemented your project using Python, including the tools and libraries you used, the code snippets, and the comments. You should also explain how you tested and evaluated your project using various metrics and criteria.
+Subtopics-
+Tools and Libraries: What are the tools and libraries you used to implement your project using Python? What are their functions and features that make them suitable for your project?
+Code Snippets: What are the code snippets of your project using Python? How do they correspond to the steps in your algorithm and data preprocessing? How do they demonstrate your coding skills and style?
+Comments: What are the comments in your code snippets? How do they explain and document your code logic and functionality? How do they follow the coding standards and conventions?
+7)	Results: A presentation of the results you obtained from your project, such as the accuracy, speed, robustness, and limitations of your facial recognition system. You should also include graphs, tables, charts, and images to visualize and compare your results with different parameters and scenarios.
+Subtopics-
+Accuracy: How did you measure the accuracy of your facial recognition system using eigenfaces? What are the metrics and criteria you used to evaluate the performance of your system, such as precision, recall, F1-score, etc.?
+Speed: How did you measure the speed of your facial recognition system using eigenfaces? What are the factors and variables that affect the speed of your system, such as image size, algorithm complexity, hardware specifications, etc.?
+Robustness: How did you measure the robustness of your facial recognition system using eigenfaces? What are the challenges and difficulties that test the robustness of your system, such as illumination changes, occlusion, pose variation, expression variation, etc.?
+Limitations: What are the limitations of your facial recognition system using eigenfaces? What are the scenarios or cases where your system fails or performs poorly? How can you overcome or mitigate these limitations in future work?
+8)	Error Analysis: A critical analysis of the errors and inaccuracies in your results, such as false positives, false negatives, misclassifications, etc. You should also identify the possible causes and sources of these errors and how they can be reduced or eliminated in future work.
+Subtopics-
+False Positives: What are false positives in facial recognition using eigenfaces? When do they occur and why do they occur? How do they affect your accuracy and reliability? How can you reduce or prevent them in future work?
+False Negatives: What are false negatives in facial recognition using eigenfaces? When do they occur and why do they occur? How do they affect your accuracy and reliability? How can you reduce or prevent them in future work?
+Misclassifications: What are misclassifications in facial recognition using eigenfaces? When do they occur and why do they occur? How do they affect your accuracy and reliability? How can you reduce or prevent them in future work?
+9)	Discussion: A critical analysis of your results, including the strengths and weaknesses of your project, the challenges and difficulties you faced, the possible sources of error and bias, and the implications and applications of your project in real-world situations.
+Strengths: What are the strengths of your project on facial recognition using eigenfaces? What are the advantages and benefits of using eigenfaces for facial recognition? How does your project compare with other existing methods or systems?
+Weaknesses: What are the weaknesses of your project on facial recognition using eigenfaces? What are the disadvantages and drawbacks of using eigenfaces for facial recognition? How does your project differ from other existing methods or systems?
+Challenges: What are the challenges you faced in your project on facial recognition using eigenfaces? What are the problems and difficulties you encountered in implementing, testing, and evaluating your project? How did you overcome or solve them?
+Implications: What are the implications of your project on facial recognition using eigenfaces? What are the potential applications and uses of your project in real-world situations? What are the ethical and social issues or concerns related to your project?
+10)	Conclusion: A concise summary of your report, including the main findings, contributions, and limitations of your project. You should also provide some suggestions for future work and improvement on facial recognition using eigenfaces.
+Subtopics-
+Findings: What are the main findings of your project on facial recognition using eigenfaces? What are the key results and outcomes of your project? How do they answer your problem statement and meet your objectives?
+Contributions: What are the main contributions of your project on facial recognition using eigenfaces? What are the novel or original aspects of your project? How do they advance the knowledge and understanding of facial recognition using eigenfaces?
+Limitations: What are the main limitations of your project on facial recognition using eigenfaces? What are the gaps and shortcomings of your project? How do they affect the validity and generalizability of your results?
+Future Work: What are the main suggestions for future work on facial recognition using eigenfaces? What are the possible extensions or improvements of your project? How can they address the limitations or challenges of your project?
+11)	References: A list of all the sources you cited in your report, such as books, journals, websites, etc. You should follow a consistent citation style throughout your report.
